@@ -1,3 +1,16 @@
 body{
-    background-color: green;
+    background-color: rgb(153, 201, 245);
+}
+.keyboard{
+    width: 20cm;
+    height: 5cm;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgb(235, 238, 240);
+    text-align: center;
+    .letter{
+        width: 2cm;
+        font-size: 1cm;
+        border:1px solid gray
+    }
 }
