@@ -6,17 +6,18 @@
     <title>Hangman</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body onkeydown="clavier(event)">
+<body onkeydown="keyboard(event)">
     <h1>Hangman</h1>
     <main>
         <section class="word" id="word">
             <h2>Word to guess</h2>
-            <p></p>
-
+            <p class="wordToGuess" id="wordToGuess"></p>
         </section>
         <section class="score" id="score">
             <h2>Your score</h2>
+            <p class="pScore" id="pScore"> 10/10</p>
         </section>
+        <section class="start" id="start"><button>START</button></section>
         <h2>Use this Keyboard</h2>
         <section class="keyboard" id="keyboard">
             <div class="letter" id="letter_a">A</div>
