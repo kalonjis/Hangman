@@ -10,15 +10,18 @@
     <h1>Hangman</h1>
     <main>
         <section class="word" id="word">
-            <h2>Word to guess</h2>
+            <h2>Guess the word</h2>
             <p class="wordToGuess" id="wordToGuess"></p>
         </section>
+        <canvas id="canvas" width="350" height="350"></canvas>
+
         <section class="score" id="score">
             <h2>Your score</h2>
-            <p class="pScore" id="pScore"> 10/10</p>
+            <p class="pScore" id="pScore"> /10</p>
+            <p class="result" id="result"></p>
         </section>
         <section class="start" id="start"><button>START</button></section>
-        <h2>Use this Keyboard</h2>
+        <h2>Use either your keyboard or this virtual keyboard</h2>
         <section class="keyboard" id="keyboard">
             <button class="letter" id="letter_a" onclick="button('a')">A</button>
             <button class="letter" id="letter_z" onclick="button('z')">Z</button>
@@ -47,7 +50,7 @@
             <button class="letter" id="letter_b" onclick="button('b')">B</button>
             <button class="letter" id="letter_n" onclick="button('n')">N</button>
         </section>
-
+        
     </main>
     <script src="assets/js/script.js"></script>
 </body>

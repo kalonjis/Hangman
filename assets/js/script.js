@@ -1,10 +1,13 @@
 //variables
 let start = false;
 let wordsArray = ["abcd", "efgh","ijkl","mnop","qrst","uvwx"];
-var word = `${wordsArray[Math.floor(Math.random()*wordsArray.length)]}`;
-var guess = word.toUpperCase().replace(/[A-Z]/g,'-');
-document.getElementById('wordToGuess').innerText = guess;
-var score = 10;
+let word = "";
+let guess = word.toUpperCase().replace(/[A-Z]/g,'-');
+//document.getElementById('wordToGuess').innerText = guess;
+let score = 0;
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+
 //starting game
 document.getElementById('start').addEventListener('click',()=>{
     start = true;
@@ -18,6 +21,8 @@ document.getElementById('start').addEventListener('click',()=>{
     for (let i = 0; i < alphabet.length; i++) {
         document.getElementById(`letter_${alphabet[i]}`).style.backgroundColor = "white";            
     }
+    ctx.clearRect(0, 0, 350, 350);
+
 });
 // for real keyboard use - called through the html document => see "body onkeydown..."
 function keyboard(evenement){
@@ -53,20 +58,67 @@ function check(letter){
         }
         // end game -win
         if (guess ===word.toUpperCase()) {
-            alert ("YOU WIN");
+            document.getElementById('result').innerText = "YOU WIN";
             start = false;
         }
     //wrong letter    
     } else {
-        alert('error');
         score -= 1;
         document.getElementById('pScore').innerText = `${score}/10`;
+        drawHangMan(score);
         // end game -loose
         if (score <=0) {
             start = false;
-            alert("YOU LOOZE");
+            document.getElementById('result').innerText = "YOU LOOZE";
         }  
     }
 
 }
+function draw(toX, toY, lineX, lineY, round = false) {
+    ctx.strokeStyle = "#999000999";
+    ctx.beginPath();
+  
+    if (round) {
+      ctx.arc(toX, toY, lineX, lineY, 2 * Math.PI); // Head
+    } else {
+      ctx.moveTo(toX, toY);
+      ctx.lineTo(lineX, lineY);
+    }
+  
+    ctx.stroke();
+  }
+  function drawHangMan(score) {
+    switch (score) {
+      case 9:
+        draw(100, 150, 100, 10);
+        break;
+      case 8:
+        draw(90, 145, 250, 145);
+        break;
+      case 7:
+        draw(100, 20, 200, 20);
+        break;
+      case 6:
+        draw(200, 20, 200, 30);
+        break;
+      case 5:
+        draw(200, 37, 8, 0, true);
+        break;
+      case 4:
+        draw(200, 45, 200, 80);
+        break;
+      case 3:
+        draw(200, 80, 190, 110);
+        break;
+      case 2:
+        draw(200, 80, 210, 110);
+        break;
+      case 1:
+        draw(200, 50, 190, 80);
+        break;
+      case 0:
+        draw(200, 50, 210, 80);
+        break;
+    }
+  }
 
