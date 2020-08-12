@@ -54,7 +54,7 @@ body main .start {
 body main .keyboard {
   margin: auto;
   background-color: #fcf7f7;
-  width: 65%;
+  width: 60%;
   height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,6 +78,7 @@ body main .keyboard .letter {
 
 body footer {
   margin: auto;
+  margin-top: 10px;
   width: 50%;
   color: #dcdee2;
 }

@@ -76,6 +76,7 @@ let ctx = canvas.getContext("2d");
 document.getElementById('start').addEventListener('click',()=>{
     start = true;
     score = 10;
+    document.getElementById('result').innerText = " ";
     document.getElementById('pScore').innerText = `${score}/10`;
     word = `${wordsArray[Math.floor(Math.random()*wordsArray.length)]}`;
     console.log(word);
