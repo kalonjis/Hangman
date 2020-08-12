@@ -25,6 +25,8 @@ body main .wordToGuess {
 }
 
 body main .score {
+  width: 60%;
+  margin: auto;
   margin-top: 0;
   margin-bottom: 10px;
   display: -webkit-box;
