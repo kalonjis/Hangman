@@ -1,16 +1,55 @@
 body{
     background-color: rgb(153, 201, 245);
-}
-.keyboard{
-    width: 20cm;
-    height: 5cm;
-    display: flex;
-    flex-flow: row wrap;
-    background-color: rgb(235, 238, 240);
     text-align: center;
-    .letter{
-        width: 2cm;
-        font-size: 1cm;
-        border:1px solid gray
+    header{
+        background-color: white;
+    }
+    main{
+        width: 90%;
+        margin: auto;
+        .wordToGuess{
+            background-color: yellow;
+            }
+        .score{
+            margin-top: 0;
+            margin-bottom: 0;
+            background-color: pink;
+            display: flex;
+            flex-flow: row;
+            .dataScore{
+                width: 40%;
+                background-color: rgb(30, 30, 32);
+                margin-bottom: 0;
+            }
+            #canvas{
+                background-color: purple;
+            }
+
+        }
+        .start{
+           background-color: blue; 
+        }
+        .keyboard{
+            margin: auto;
+            background-color: rgb(252, 247, 247);
+            width: 70%;
+            height:220px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            //background-color: rgb(235, 238, 240);
+            text-align: center;
+            .letter{
+                width: 78px;
+                font-size: 15px;
+                border:2px solid rgb(65, 90, 236);
+                border-radius: 5px;
+            }
+        }
+    }
+    footer{
+        margin: auto;
+        width: 50%;
+        color: rgb(220, 222, 226);
     }
 }

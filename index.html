@@ -7,21 +7,22 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body onkeydown="keyboard(event)">
-    <h1>Hangman</h1>
+    <header>
+        <h1>Hangman Game</h1>
+    </header>
     <main>
-        <section class="word" id="word">
-            <h2>Guess the word</h2>
-            <p class="wordToGuess" id="wordToGuess"></p>
-        </section>
-        <canvas id="canvas" width="350" height="350"></canvas>
-
+        <h2 class="wordToGuess" id="wordToGuess">Guess me</h2>
+        
         <section class="score" id="score">
-            <h2>Your score</h2>
-            <p class="pScore" id="pScore"> /10</p>
-            <p class="result" id="result"></p>
+            <article class="dataScore" id="dataScore">
+                <h2>Your score</h2>
+                <p class="pScore" id="pScore"> /10</p>
+                <h3 class="result" id="result"></h3>
+            </article>
+            <canvas id="canvas" width="250" height="200"></canvas>
         </section>
         <section class="start" id="start"><button>START</button></section>
-        <h2>Use either your keyboard or this virtual keyboard</h2>
+        <h4>Use either your keyboard or this virtual keyboard</h4>
         <section class="keyboard" id="keyboard">
             <button class="letter" id="letter_a" onclick="button('a')">A</button>
             <button class="letter" id="letter_z" onclick="button('z')">Z</button>
@@ -52,6 +53,7 @@
         </section>
         
     </main>
+    <footer>Stephane Kalonji @BeCode -Woods 3-21, August 2020</footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,10 +1,53 @@
 body {
   background-color: #99c9f5;
+  text-align: center;
 }
 
-.keyboard {
-  width: 20cm;
-  height: 5cm;
+body header {
+  background-color: white;
+}
+
+body main {
+  width: 90%;
+  margin: auto;
+}
+
+body main .wordToGuess {
+  background-color: yellow;
+}
+
+body main .score {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+body main .score .dataScore {
+  width: 40%;
+  background-color: #1e1e20;
+  margin-bottom: 0;
+}
+
+body main .score #canvas {
+  background-color: purple;
+}
+
+body main .start {
+  background-color: blue;
+}
+
+body main .keyboard {
+  margin: auto;
+  background-color: #fcf7f7;
+  width: 70%;
+  height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,13 +55,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  background-color: #ebeef0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
-.keyboard .letter {
-  width: 2cm;
-  font-size: 1cm;
-  border: 1px solid gray;
+body main .keyboard .letter {
+  width: 78px;
+  font-size: 15px;
+  border: 2px solid #415aec;
+  border-radius: 5px;
+}
+
+body footer {
+  margin: auto;
+  width: 50%;
+  color: #dcdee2;
 }
 /*# sourceMappingURL=styles.css.map */

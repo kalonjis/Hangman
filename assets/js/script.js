@@ -1,9 +1,73 @@
 //variables
 let start = false;
-let wordsArray = ["abcd", "efgh","ijkl","mnop","qrst","uvwx"];
+let wordsArray = ["Abricot",
+  "Airelle",
+  "Alkékenge",
+  "Amande",
+  "Amélanche",
+  "Ananas",
+  "Arbouse",
+  "Asimine",
+  "Avocat",
+  "Banane",
+  "Bergamote",
+  "Bigarade",
+  "Orange",
+  "Bleuet",
+  "Canneberge",
+  "Cantaloup",
+  "Cassis",
+  "Cerise",
+  "Châtaigne",
+  "Citron",
+  "Clémentine",
+  "Coing",
+  "Cornouiller",
+  "Cynorrhodon",
+  "Datte",
+  "Feijoa",
+  "Figue",
+  "Fraise",
+  "Framboise",
+  "Grenade",
+  "Griotte",
+  "Groseille",
+  "Jujube",
+  "Kaki",
+  "Kiwaï",
+  "Kiwi",
+  "Lime",
+  "Mandarine",
+  "Marron",
+  "Melon",
+  "Mûre",
+  "Myrte",
+  "Myrtille",
+  "Nèfle",
+  "Noisette",
+  "Noix",
+  "Olive",
+  "Orange",
+  "Pamplemousse",
+  "Pastèque",
+  "Pêche",
+  "nectarine",
+  "pavie",
+  "Physalis",
+  "coqueret",
+  "Pistache",
+  "Plaquebière",
+  "chicouté",
+  "Poire",
+  "Pomme",
+  "Pomélos",
+  "Prunes",
+  "pruneaux",
+  "mirabelle",
+  "quetsche",
+  "Raisin"];
 let word = "";
 let guess = word.toUpperCase().replace(/[A-Z]/g,'-');
-//document.getElementById('wordToGuess').innerText = guess;
 let score = 0;
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
@@ -14,9 +78,9 @@ document.getElementById('start').addEventListener('click',()=>{
     score = 10;
     document.getElementById('pScore').innerText = `${score}/10`;
     word = `${wordsArray[Math.floor(Math.random()*wordsArray.length)]}`;
+    console.log(word);
     guess = word.toUpperCase().replace(/[A-Z]/g,'-');
     document.getElementById('wordToGuess').innerText = guess;
-    console.log(word);
     let alphabet = ['a','z','e','r','t','y','u','i','o','p','q','s','d','f','g','h','j','k','l','m','w','x','c','v','b','n'];
     for (let i = 0; i < alphabet.length; i++) {
         document.getElementById(`letter_${alphabet[i]}`).style.backgroundColor = "white";            
@@ -86,8 +150,8 @@ function draw(toX, toY, lineX, lineY, round = false) {
     }
   
     ctx.stroke();
-  }
-  function drawHangMan(score) {
+}
+function drawHangMan(score) {
     switch (score) {
       case 9:
         draw(100, 150, 100, 10);
@@ -120,5 +184,5 @@ function draw(toX, toY, lineX, lineY, round = false) {
         draw(200, 50, 210, 80);
         break;
     }
-  }
+}
 
