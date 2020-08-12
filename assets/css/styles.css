@@ -1,25 +1,32 @@
 body {
   background-color: #99c9f5;
   text-align: center;
-}
-
-body header {
-  background-color: white;
-}
-
-body main {
   width: 90%;
   margin: auto;
 }
 
+body header {
+  width: 50%;
+  margin: auto;
+  color: white;
+}
+
+body main {
+  margin: auto;
+}
+
 body main .wordToGuess {
-  background-color: yellow;
+  background-color: white;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 10px;
+  border: 3px solid #415aec;
+  border-radius: 5px;
 }
 
 body main .score {
   margin-top: 0;
-  margin-bottom: 0;
-  background-color: pink;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,26 +34,27 @@ body main .score {
   -webkit-box-direction: normal;
       -ms-flex-flow: row;
           flex-flow: row;
+  border: 3px solid white;
 }
 
 body main .score .dataScore {
   width: 40%;
-  background-color: #1e1e20;
   margin-bottom: 0;
 }
 
-body main .score #canvas {
-  background-color: purple;
-}
-
 body main .start {
-  background-color: blue;
+  background-color: #e0e0e9;
+  width: 25%;
+  font-size: 15px;
+  border: 2px solid #415aec;
+  border-radius: 5px;
+  margin: auto;
 }
 
 body main .keyboard {
   margin: auto;
   background-color: #fcf7f7;
-  width: 70%;
+  width: 65%;
   height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;

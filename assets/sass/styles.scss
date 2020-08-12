@@ -1,38 +1,54 @@
 body{
     background-color: rgb(153, 201, 245);
     text-align: center;
+    width: 90%;
+    margin: auto;
+
     header{
-        background-color: white;
+        width: 50%;
+        margin: auto;
+        color: white;
     }
     main{
-        width: 90%;
         margin: auto;
         .wordToGuess{
-            background-color: yellow;
+            background-color: white;
+            width: 40%;
+            margin: auto;
+            margin-bottom: 10px;
+            border: 3px solid  rgb(65, 90, 236);
+            border-radius: 5px;
             }
         .score{
             margin-top: 0;
-            margin-bottom: 0;
-            background-color: pink;
+            margin-bottom: 10px;
+            //background-color: pink;
             display: flex;
             flex-flow: row;
+            border: 3px solid white;
             .dataScore{
                 width: 40%;
-                background-color: rgb(30, 30, 32);
+                //background-color: rgb(30, 30, 32);
                 margin-bottom: 0;
             }
             #canvas{
-                background-color: purple;
+                //background-color: purple;
+                
             }
 
         }
         .start{
-           background-color: blue; 
+           background-color: rgb(224, 224, 233);
+           width: 25%;
+           font-size: 15px;
+           border:2px solid rgb(65, 90, 236);
+           border-radius: 5px;
+           margin: auto; 
         }
         .keyboard{
             margin: auto;
             background-color: rgb(252, 247, 247);
-            width: 70%;
+            width: 65%;
             height:220px;
             display: flex;
             flex-flow: row wrap;

@@ -139,7 +139,7 @@ function check(letter){
 
 }
 function draw(toX, toY, lineX, lineY, round = false) {
-    ctx.strokeStyle = "#999000999";
+    ctx.strokeStyle = "#220220220";
     ctx.beginPath();
   
     if (round) {
